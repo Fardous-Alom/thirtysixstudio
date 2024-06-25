@@ -3,7 +3,7 @@ import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 
-//components
+// Components
 import HeaderBar from './HeaderBar';
 import NavList from './NavList';
 
@@ -33,7 +33,6 @@ const closedMixin = (theme) => ({
 const DrawerHeader = styled('div')(({ theme }) => ({
     ...theme.mixins.toolbar,
 }));
-
 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
     ({ theme, open }) => ({
@@ -67,7 +66,7 @@ function SwipeDrawer() {
                 handleDrawer={handleDrawer}
             />
             <Drawer variant="permanent" open={open}>
-                <DrawerHeader></DrawerHeader>
+                <DrawerHeader />
                 <NavList />
             </Drawer>
         </Box>
